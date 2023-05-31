@@ -22,10 +22,10 @@ if __name__=='__main__':
     sys.exit(1)
 
   # defaults
-  CLIHOST='127.0.0.1'
+  CLIHOST='172.18.120.25'
   CLIPORT=7000
   CLIUSER='admin'
-  CLIPASS=''
+  CLIPASS='IM@54321#'
 
   PARAMS=['account', 'domain', 'password', 'full-name']
   PARAMSV={'account': None, 'domain': None, 'password': None, 'full-name': None}
@@ -50,7 +50,7 @@ if __name__=='__main__':
       print >>sys.stderr, 'Error: Non-numeric CLI port passed as parameter'
       sys.exit(1)
     CLIHOST=CLIHOST.split(':')[0]
-  if os.environ.has_key('CLIDEBUG'):
+  if 'CLIDEBUG' in os.environ:
     if len(os.environ['CLIDEBUG'])>0:
       cli2.CLI.debug=1
 
