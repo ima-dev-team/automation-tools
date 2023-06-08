@@ -17,11 +17,8 @@ password = "IM@54321#"
 # Nome do subdomínio fornecido como argumento
 subdomain_name = sys.argv[1]
 
-# Domínio raiz e sufixo
-root_domain = "gov.ao"
-
 # Nome completo do domínio
-domain_name = f"{subdomain_name}.{root_domain}"
+domain_name = f"{subdomain_name}"
 
 # Comandos para criar o domínio
 commands = [
